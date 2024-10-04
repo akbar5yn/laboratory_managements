@@ -14,46 +14,35 @@
     <section class="sidebar w-full pl-5">
         <ul class="font-poppins text-white space-y-6 w-full relative">
             <li class="relative">
-                <a href="/dashboard"
-                    class="{{ request()->is('dashboard') ? 'active-dashboard bg-[#C8E0ED] text-[#265166] rounded-l-full shadow-lg' : '' }} flex items-center gap-3 p-2 relative">
-                    <img src="dashboard-icon-url.svg" class="w-6" alt="Dashboard Icon" />
+                <x-nav-link href="/dashboard" :active="request()->is('dashboard')" :src="'img/dashboard-icon.svg'">
+                    <x-heroicon-s-home
+                        class="w-6 h-6 {{ request()->is('dashboard') ? 'text-[#265166]' : 'text-white' }}" />
                     Beranda
-                </a>
+                </x-nav-link>
             </li>
             <li class="rounded-full">
-                <a href="/inventaris"
-                    class="{{ request()->is('inventaris') ? 'active-dashboard bg-[#C8E0ED] text-[#265166] rounded-l-full w-full shadow-lg' : '' }} flex items-center gap-3 p-2 relative">
-                    <img src="inventory-icon-url.svg" class="w-6" alt="Inventory Icon" />
-                    Inventaris
-                </a>
+                <x-nav-link href="/inventaris" :active="request()->is('inventaris')">
+                    <x-heroicon-s-archive-box
+                        class="w-6 h-6 {{ request()->is('inventaris') ? 'text-[#265166]' : 'text-white' }}" />
+                    Inventaris</x-nav-link>
             </li>
             <li>
-                <a href="/peminjaman"
-                    class="{{ request()->is('peminjaman') ? 'bg-white text-[#285468]' : '' }} flex items-center gap-3 p-2 rounded-md">
-                    <img src="borrowing-icon-url.svg" class="w-6" alt="Borrowing Icon" />
-                    Peminjaman
-                </a>
+                <x-nav-link href="/peminjaman" :active="request()->is('peminjaman')">
+                    <x-heroicon-c-pencil-square
+                        class="w-6 h-6 {{ request()->is('peminjaman') ? 'text-[#265166]' : 'text-white' }}" />
+                    Peminjaman</x-nav-link>
             </li>
             <li>
-                <a href="/jadwal-ruangan"
-                    class="{{ request()->is('jadwal-ruangan') ? 'bg-white text-[#285468]' : '' }} flex items-center gap-3 p-2 rounded-md">
-                    <img src="schedule-icon-url.svg" class="w-6" alt="Schedule Icon" />
-                    Jadwal Ruangan
-                </a>
+                <x-nav-link href="/jadwal-ruangan" :active="request()->is('jadwal-ruangan')">
+                    <x-heroicon-c-calendar-date-range
+                        class="w-6 h-6 {{ request()->is('jadwal-ruangan') ? 'text-[#265166]' : 'text-white' }}" />
+                    Jadwal Ruangan</x-nav-link>
             </li>
             <li>
-                <a href="/laporan"
-                    class="{{ request()->is('laporan') ? 'bg-white text-[#285468]' : '' }} flex items-center gap-3 p-2 rounded-md">
-                    <img src="report-icon-url.svg" class="w-6" alt="Report Icon" />
-                    Reporting
-                </a>
-            </li>
-            <li>
-                <a href="/settings"
-                    class="{{ request()->is('settings') ? 'bg-white text-[#285468]' : '' }} flex items-center gap-3 p-2 rounded-md">
-                    <img src="settings-icon-url.svg" class="w-6" alt="Settings Icon" />
-                    Laporan
-                </a>
+                <x-nav-link href="/laporan" :active="request()->is('laporan')">
+                    <x-heroicon-m-clipboard-document-list
+                        class="w-6 h-6 {{ request()->is('laporan') ? 'text-[#265166]' : 'text-white' }}" />
+                    Laporan</x-nav-link>
             </li>
         </ul>
     </section>
