@@ -4,10 +4,10 @@
     <section class="bg-[#f6fafd] p-4 rounded-md flex flex-col gap-4 max-w-full">
         <h2 class="font-semibold text-xl">Over View</h2>
         <article class="snap-start flex gap-10 ml-4 overflow-x-scroll scroll-pl-2 snap-x ">
-            <div div pl-2
+            <div
                 class="snap-start border-1 bg-[#d0f1e673] p-2 flex gap-5 items-center rounded-xl border border-[#559f86] backdrop-brightness-200 min-w-fit">
-                <div class="p-3 bg-[#d0f1e6] rounded-md border border-[#559f86] min-h-full">
-                    <img src="" alt="">
+                <div class="p-3 bg-[#d0f1e6] rounded-md border border-[#559f86] min-h-fit">
+                    <x-heroicon-s-users class="w-8" />
                 </div>
                 <div>
                     <p class="font-semi-bold text-xl font-semibold">2</p>
@@ -16,8 +16,8 @@
             </div>
             <div
                 class="snap-start border-1 bg-[#d0f1e673] p-2 flex gap-5 items-center rounded-xl border border-[#559f86] backdrop-brightness-200 min-w-fit">
-                <div class="p-3 bg-[#d0f1e6] rounded-md border border-[#559f86] min-h-full">
-                    <img src="" alt="">
+                <div class="p-3 bg-[#d0f1e6] rounded-md border border-[#559f86] min-h-fit">
+                    <x-heroicon-s-cube class="w-8" />
                 </div>
                 <div>
                     <p class="font-semi-bold text-xl font-semibold">100</p>
@@ -26,8 +26,8 @@
             </div>
             <div
                 class="snap-start border-1 bg-[#d0f1e673] p-2 flex gap-5 items-center rounded-xl border border-[#559f86] backdrop-brightness-200 min-w-fit">
-                <div class="p-3 bg-[#d0f1e6] rounded-md border border-[#559f86] min-h-full">
-                    <img src="" alt="">
+                <div class="p-3 bg-[#d0f1e6] rounded-md border border-[#559f86] min-h-fit">
+                    <x-heroicon-s-inbox-arrow-down class="w-8" />
                 </div>
                 <div>
                     <p class="font-semi-bold text-xl font-semibold">20</p>
@@ -36,8 +36,8 @@
             </div>
             <div
                 class="snap-start border-1 bg-[#d0f1e673] p-2 flex gap-5 items-center rounded-xl border border-[#559f86] backdrop-brightness-200 min-w-fit">
-                <div class="p-3 bg-[#d0f1e6] rounded-md border border-[#559f86] min-h-full">
-                    <img src="" alt="">
+                <div class="p-3 bg-[#d0f1e6] rounded-md border border-[#559f86] min-h-fit">
+                    <x-heroicon-s-square-3-stack-3d class="w-8" />
                 </div>
                 <div>
                     <p class="font-semi-bold text-xl font-semibold">20</p>
@@ -46,8 +46,8 @@
             </div>
             <div
                 class="snap-start border-1 bg-[#F7F4F3] p-2 flex gap-5 items-center rounded-xl border border-[#edbca0] backdrop-brightness-200 min-w-fit">
-                <div class="p-3 bg-[#F1DCD0] rounded-md border border-[#edbca0] min-h-full flex items-center">
-                    <img src="" alt="">
+                <div class="p-3 bg-[#F1DCD0] rounded-md border border-[#edbca0] min-h-fit flex items-center">
+                    <x-heroicon-s-wrench-screwdriver class="w-8" />
                 </div>
                 <div>
                     <p class="font-semi-bold text-xl font-semibold">2</p>
@@ -148,7 +148,7 @@
 
         <!-- ANCHOR Penggunaan Alat & Barang -->
         <section class="bg-[#f6fafd] p-4 rounded-md flex flex-col gap-4 max-w-full">
-            <h2 class="font-semibold text-xl">Penggunaan Alat & Barang</h2>
+            <h2 class="font-semibold text-xl">Statistik Penggunaan Alat & Barang</h2>
         </section>
     </div>
 </x-layout>
