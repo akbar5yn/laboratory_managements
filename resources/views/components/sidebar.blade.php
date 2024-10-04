@@ -1,4 +1,4 @@
-<main class="hidden lg:w-[250px] bg-[#265166] lg:flex flex-col items-center fixed gap-16 lg:min-h-screen">
+<main class="hidden lg:w-[250px] bg-[#265166] lg:flex flex-col items-center gap-10 rounded-xl shadow-md relative">
     <!-- ANCHOR PROFILE -->
     <section class="flex flex-col justify-center items-center gap-4 font-poppins text-white px-10 py-4">
         <div class="border-2 border-white rounded-full p-1">
@@ -45,5 +45,9 @@
                     Laporan</x-nav-link>
             </li>
         </ul>
+
     </section>
+    <button class="font-poppins text-white flex gap-3 absolute bottom-10">
+        <x-heroicon-m-arrow-left-start-on-rectangle class="w-6 h-6 text-white" />
+        Logout</button>
 </main>
