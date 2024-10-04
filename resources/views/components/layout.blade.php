@@ -14,15 +14,34 @@
     <title>Layanan Lab Fisika UAD</title>
 
     <style>
-        ::-webkit-scrollbar {
-            width: 1px;
-        }
-
         :root {
             --cyan: #C8E0ED;
         }
 
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
 
+        /* Track */
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.438);
+            border-radius: 10px;
+            height: 1px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #559f8649;
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b30000;
+        }
+
+        /* ANCHOR Sidebar */
         /* Styling untuk link yang aktif */
         .active-dashboard::before,
         .active-dashboard::after {
@@ -46,11 +65,21 @@
             box-shadow: 35px -35px 0 10px var(--cyan);
         }
 
+        /* ANCHOR Main Content */
+
+        .header {
+            height: 80px;
+        }
 
         .main-content {
-            position: absolute;
+            position: relative;
             width: calc(100% - 250px);
-            left: 250px;
+            height: calc(100%);
+            /* left: 250px; */
+        }
+
+        .main-slot {
+            height: calc(100%);
         }
 
         @media (max-width: 1024px) {
@@ -62,12 +91,12 @@
     </style>
 </head>
 
-<body class="h-full flex">
+<body class=" bg-[#C8E0ED] flex p-10 gap-10">
     <x-sidebar></x-sidebar>
-    <div class="flex flex-col min-h-screen bg-[#C8E0ED] font-poppins main-content">
+    <main class="flex flex-col gap-4  font-poppins main-content">
         <x-header>{{ $title }}</x-header>
-        <main class="py-5 px-7">{{ $slot }}</main>
-    </div>
+        <div class="main-slot">{{ $slot }}</div>
+    </main>
 </body>
 
 </html>
