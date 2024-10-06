@@ -3,56 +3,56 @@
     <div class="flex flex-col gap-4 h-full">
         <!-- ANCHOR Over View -->
         <section class="bg-[#f6fafd] p-4 rounded-xl flex flex-col gap-4 max-w-full">
-            <h2 class="font-semibold text-xl">Over View</h2>
+            <h2 class="font-medium text-lg">Over View</h2>
             <article class="snap-start flex gap-10 ml-4 overflow-x-scroll scroll-pl-2 snap-x pb-2">
                 <div
                     class="snap-start border-1 bg-[#d0f1e673] p-2 flex gap-5 items-center rounded-xl border border-[#559f86] backdrop-brightness-200 min-w-fit">
                     <div class="p-3 bg-[#d0f1e6] rounded-md border border-[#559f86] min-h-fit">
-                        <x-heroicon-s-users class="w-8" />
+                        <x-heroicon-s-users class="w-6" />
                     </div>
                     <div>
                         <p class="font-semi-bold text-xl font-semibold">2</p>
-                        <p class="text-gray-600">Mahasiswa</p>
+                        <p class="text-gray-600 text-sm">Mahasiswa</p>
                     </div>
                 </div>
                 <div
                     class="snap-start border-1 bg-[#d0f1e673] p-2 flex gap-5 items-center rounded-xl border border-[#559f86] backdrop-brightness-200 min-w-fit">
                     <div class="p-3 bg-[#d0f1e6] rounded-md border border-[#559f86] min-h-fit">
-                        <x-heroicon-s-cube class="w-8" />
+                        <x-heroicon-s-cube class="w-6" />
                     </div>
                     <div>
                         <p class="font-semi-bold text-xl font-semibold">100</p>
-                        <p class="text-gray-600">Total Barang</p>
+                        <p class="text-gray-600 text-sm">Total Barang</p>
                     </div>
                 </div>
                 <div
                     class="snap-start border-1 bg-[#d0f1e673] p-2 flex gap-5 items-center rounded-xl border border-[#559f86] backdrop-brightness-200 min-w-fit">
                     <div class="p-3 bg-[#d0f1e6] rounded-md border border-[#559f86] min-h-fit">
-                        <x-heroicon-s-inbox-arrow-down class="w-8" />
+                        <x-heroicon-s-inbox-arrow-down class="w-6" />
                     </div>
                     <div>
                         <p class="font-semi-bold text-xl font-semibold">20</p>
-                        <p class="text-gray-600">Pengajuan Peminjaman <br> Ruangan</p>
+                        <p class="text-gray-600 text-sm">Pengajuan Peminjaman <br> Ruangan</p>
                     </div>
                 </div>
                 <div
                     class="snap-start border-1 bg-[#d0f1e673] p-2 flex gap-5 items-center rounded-xl border border-[#559f86] backdrop-brightness-200 min-w-fit">
                     <div class="p-3 bg-[#d0f1e6] rounded-md border border-[#559f86] min-h-fit">
-                        <x-heroicon-s-square-3-stack-3d class="w-8" />
+                        <x-heroicon-s-square-3-stack-3d class="w-6" />
                     </div>
                     <div>
                         <p class="font-semi-bold text-xl font-semibold">20</p>
-                        <p class="text-gray-600">Pengajuan Peminjaman <br> Alat & Barang</p>
+                        <p class="text-gray-600 text-sm">Pengajuan Peminjaman <br> Alat & Barang</p>
                     </div>
                 </div>
                 <div
                     class="snap-start border-1 bg-[#F7F4F3] p-2 flex gap-5 items-center rounded-xl border border-[#edbca0] backdrop-brightness-200 min-w-fit">
                     <div class="p-3 bg-[#F1DCD0] rounded-md border border-[#edbca0] min-h-fit flex items-center">
-                        <x-heroicon-s-wrench-screwdriver class="w-8" />
+                        <x-heroicon-s-wrench-screwdriver class="w-6" />
                     </div>
                     <div>
                         <p class="font-semi-bold text-xl font-semibold">2</p>
-                        <p class="text-gray-600">Alat / Barang Rusak</p>
+                        <p class="text-gray-600 text-sm">Alat / Barang Rusak</p>
                     </div>
                 </div>
             </article>
@@ -62,7 +62,7 @@
 
             <!-- ANCHOR Penggunaan Ruangan -->
             <section class="bg-[#f6fafd] p-4 rounded-xl flex flex-col gap-4 max-w-full h-full">
-                <h2 class="font-semibold text-xl">Penggunaan Ruangan</h2>
+                <h2 class="font-medium text-lg">Penggunaan Ruangan</h2>
 
                 <!-- ANCHOR Filtering by lab dan tanggal -->
                 <section class="flex justify-between items-center">
@@ -110,13 +110,13 @@
                 </section>
 
                 <!-- ANCHOR Table -->
-                <section class="">
+                <section class="flex flex-col justify-between  h-full">
                     <table class="table-auto w-full">
                         <thead class="">
                             <tr class="text-left">
-                                <th class="border-b pl-2 py-2 border-slate-300 ...">No</th>
-                                <th class="border-b pl-2 py-2 border-slate-300 ...">Peminjam</th>
-                                <th class="border-b pl-2 py-2 border-slate-300 ...">Waktu</th>
+                                <th class="border-b pl-2 py-2 border-slate-300 text-sm">No</th>
+                                <th class="border-b pl-2 py-2 border-slate-300 text-sm">Peminjam</th>
+                                <th class="border-b pl-2 py-2 border-slate-300 text-sm">Waktu</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -126,9 +126,10 @@
         return strtotime($startTime);
     }) as $schedule)
                                 <tr class="schedule-row">
-                                    <td class="border-b pl-2 py-2 border-slate-300">{{ $loop->iteration }}</td>
-                                    <td class="border-b pl-2 py-2 border-slate-300">{{ $schedule['name'] }}</td>
-                                    <td class="border-b pl-2 py-2 border-slate-300">{{ $schedule['waktu'] }}</td>
+                                    <td class="border-b pl-2 py-2 border-slate-300 text-sm">{{ $loop->iteration }}</td>
+                                    <td class="border-b pl-2 py-2 border-slate-300 text-sm">{{ $schedule['name'] }}</td>
+                                    <td class="border-b pl-2 py-2 border-slate-300 text-sm">{{ $schedule['waktu'] }}
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -141,7 +142,7 @@
 
             <!-- ANCHOR Penggunaan Alat & Barang -->
             <section class="bg-[#f6fafd] p-4 rounded-xl flex flex-col gap-4 max-w-full">
-                <h2 class="font-semibold text-xl">Statistik Penggunaan Alat & Barang</h2>
+                <h2 class="font-medium text-lg">Statistik Penggunaan Alat & Barang</h2>
             </section>
         </div>
     </div>
@@ -154,7 +155,7 @@
                 var screenHeight = window.innerHeight;
 
                 // Tentukan limit berdasarkan tinggi layar
-                var limit = screenHeight < 800 ? 3 : rows.length;
+                var limit = screenHeight < 1024 ? 4 : rows.length;
 
                 // Sembunyikan atau tampilkan baris berdasarkan limit
                 rows.forEach(function(row, index) {
