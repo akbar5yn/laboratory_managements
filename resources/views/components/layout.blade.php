@@ -23,13 +23,6 @@
             height: 10px;
         }
 
-        /* Track */
-        ::-webkit-scrollbar-track {
-            box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.438);
-            border-radius: 10px;
-            height: 1px;
-        }
-
         /* Handle */
         ::-webkit-scrollbar-thumb {
             background: #559f8649;
@@ -43,6 +36,14 @@
 
         /* ANCHOR Sidebar */
         /* Styling untuk link yang aktif */
+        .sidebar {
+            direction: rtl;
+        }
+
+        .sidebar ul {
+            direction: ltr;
+        }
+
         .active-dashboard::before,
         .active-dashboard::after {
             content: "";
