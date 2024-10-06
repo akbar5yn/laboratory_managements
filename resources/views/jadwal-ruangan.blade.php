@@ -53,7 +53,7 @@
         </section>
         <!-- SECTION Table -->
         <section class="table h-full bg-[#f6fafd] rounded-xl overflow-hidden shadow-md">
-            <div class="  grid grid-cols-[2%_10%_25%_40%_25%] gap-5 border-b ">
+            <div class="  grid grid-cols-[2%_10%_25%_40%_auto] gap-5 border-b ">
                 <p class=" pl-2 py-2">No</p>
                 <p class=" pl-2 py-2">NIM</p>
                 <p class=" pl-2 py-2">Peminjam</p>
@@ -65,7 +65,7 @@
         $startTime = explode(' - ', $schedule['waktu'])[0];
         return strtotime($startTime);
     }) as $schedule)
-                    <div class="grid grid-cols-[2%_10%_25%_40%_25%] gap-5 border-b">
+                    <div class="grid grid-cols-[2%_10%_25%_40%_auto] gap-5 border-b">
                         <p class="pl-2 py-2 ">{{ $loop->iteration }}</p>
                         <p class="pl-2 py-2 ">{{ $schedule['nim'] }}</p>
                         <p class="pl-2 py-2 ">{{ $schedule['name'] }}</p>
