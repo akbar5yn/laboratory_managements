@@ -47,8 +47,12 @@ Route::get('/dashboard', function () {
     ]]);
 });
 
-Route::get('/inventaris', function () {
-    return view('inventaris', ['title' => 'Invetaris']);
+Route::get('/inventaris-alat', function () {
+    return view('inventaris-alat', ['title' => 'Kelola Alat & Barang']);
+});
+
+Route::get('/inventaris-ruangan', function () {
+    return view('inventaris-ruangan', ['title' => 'Kelola Ruangan']);
 });
 
 Route::get('/jadwal-ruangan', function () {
@@ -92,4 +96,12 @@ Route::get('/jadwal-ruangan', function () {
         ],
     ]
 ]);
+});
+
+Route::get('/peminjaman-alat', function () {
+    return view('peminjaman-alat', ['title' => 'Peminjaman Alat & Barang']);
+});
+
+Route::get('/peminjaman-ruangan', function () {
+    return view('peminjaman-ruangan', ['title' => 'Peminjaman Ruangan']);
 });
