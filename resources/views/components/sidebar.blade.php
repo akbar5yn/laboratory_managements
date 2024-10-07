@@ -2,7 +2,7 @@
     <!-- ANCHOR PROFILE -->
     <section class="flex flex-col justify-center items-center gap-4 font-poppins text-white px-10 py-4 h-[300px]">
         <div class="border-2 border-white rounded-full p-1">
-            <img src="img/avatar.png" alt="avatar" class="w-20 bg-white rounded-full p-1">
+            <img src="/img/avatar.png" alt="avatar" class="w-20 bg-white rounded-full p-1">
         </div>
         <div class="text-center">
             <h1 class="text-base">Akbar Pratama S</h1>
@@ -34,7 +34,7 @@
                     x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
                     x-transition:leave="transition ease-in duration-75 transform"
                     x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95">
-                    <x-nav-link href="/inventaris-alat" :active="request()->is('inventaris-alat')">
+                    <x-nav-link href="/inventaris-alat" :active="request()->is('inventaris-alat*')">
                         <span class="w-6"></span>
                         Alat & Barang</x-nav-link>
                     <x-nav-link href="/inventaris-ruangan" :active="request()->is('inventaris-ruangan')">

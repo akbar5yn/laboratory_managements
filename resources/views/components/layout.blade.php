@@ -9,7 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Layanan Lab Fisika UAD</title>
 
@@ -26,7 +26,7 @@
         /* Handle */
         ::-webkit-scrollbar-thumb {
             background: #559f8649;
-            border-radius: 10px;
+            border-radius: 20px;
         }
 
         /* Handle on hover */
@@ -68,19 +68,16 @@
 
         /* ANCHOR Main Content */
 
-        .header {
-            height: 80px;
-        }
 
         .main-content {
             position: relative;
             width: calc(100% - 250px);
-            height: calc(100%);
+            height: 100%;
             /* left: 250px; */
         }
 
         .main-slot {
-            height: calc(100%);
+            height: calc(100% - 76px);
         }
 
         @media (max-width: 1024px) {
@@ -94,8 +91,12 @@
 
 <body class=" bg-[#C8E0ED] flex p-10 gap-10">
     <x-sidebar></x-sidebar>
-    <main class="flex flex-col gap-4  font-poppins main-content">
-        <x-header>{{ $title }}</x-header>
+    <main class=" main-content flex flex-col gap-4 font-poppins">
+        @if (isset($subtitle) && isset($subtitle))
+            <x-header :title="$title" :subtitle="$subtitle"></x-header>
+        @else
+            <x-header :title="$title"></x-header>
+        @endif
         <div class="main-slot">{{ $slot }}</div>
     </main>
 </body>
