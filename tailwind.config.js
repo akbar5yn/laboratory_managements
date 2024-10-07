@@ -4,6 +4,7 @@ export default {
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
     "./resources/**/*.vue",
+    'node_modules/preline/dist/*.js',
   ],
   theme: {
     extend: {
@@ -17,7 +18,7 @@ export default {
   },
   plugins: [
     require('@tailwindcss/forms'),
-    // require('tailwindcss-filters')
+    require('preline/plugin'),
   ],
 }
 
