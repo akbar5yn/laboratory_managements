@@ -1,4 +1,4 @@
-<header class="header h-[60px] bg-[#f6fafd] py-5 px-4 flex justify-between items-center rounded-xl shadow-md">
+<header class="header h-[60px] bg-[#FFFFFF] py-5 px-4 flex justify-between items-center rounded-xl shadow-md">
     <div class="flex items-center gap-2">
         @if (isset($subtitle) && isset($subtitle))
             <h1 class="font-medium text-xl">{{ $title }}</h1>

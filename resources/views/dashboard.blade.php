@@ -2,7 +2,7 @@
     <x-slot:title>{{ $title }}</x-slot:title>
     <div class="flex flex-col gap-4 h-full">
         <!-- ANCHOR Over View -->
-        <section class="bg-[#f6fafd] p-4 rounded-xl flex flex-col gap-4 max-w-full">
+        <section class="bg-[#FFFFFF] p-4 rounded-xl flex flex-col gap-4 max-w-full shadow-md">
             <h2 class="font-medium text-lg">Over View</h2>
             <article class="snap-start flex gap-10 ml-4 overflow-x-scroll scroll-pl-2 snap-x pb-2">
                 <div
@@ -61,7 +61,7 @@
         <div class=" grid grid-cols-2 gap-5 h-full">
 
             <!-- ANCHOR Penggunaan Ruangan -->
-            <section class="bg-[#f6fafd] p-4 rounded-xl flex flex-col gap-4 max-w-full h-full">
+            <section class="bg-[#FFFFFF] shadow-md p-4 rounded-xl flex flex-col gap-4 max-w-full h-full">
                 <h2 class="font-medium text-lg">Penggunaan Ruangan</h2>
 
                 <!-- ANCHOR Filtering by lab dan tanggal -->
@@ -142,7 +142,7 @@
             </section>
 
             <!-- ANCHOR Penggunaan Alat & Barang -->
-            <section class="bg-[#f6fafd] p-4 rounded-xl flex flex-col gap-4 max-w-full">
+            <section class="bg-[#FFFFFF] shadow-md p-4 rounded-xl flex flex-col gap-4 max-w-full">
                 <h2 class="font-medium text-lg">Statistik Penggunaan Alat & Barang</h2>
             </section>
         </div>

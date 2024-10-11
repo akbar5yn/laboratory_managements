@@ -15,7 +15,7 @@
 
     <style>
         :root {
-            --cyan: #C8E0ED;
+            --background: #F7F9FC;
         }
 
         ::-webkit-scrollbar {
@@ -58,12 +58,12 @@
 
         .active-dashboard::before {
             top: -50px;
-            box-shadow: 35px 35px 0 10px var(--cyan);
+            box-shadow: 35px 35px 0 10px var(--background);
         }
 
         .active-dashboard::after {
             bottom: -50px;
-            box-shadow: 35px -35px 0 10px var(--cyan);
+            box-shadow: 35px -35px 0 10px var(--background);
         }
 
         /* ANCHOR Main Content */
@@ -89,7 +89,7 @@
     </style>
 </head>
 
-<body class=" bg-[#C8E0ED] flex p-10 gap-10">
+<body class=" bg-[#F7F9FC] flex p-10 gap-10">
     <x-sidebar></x-sidebar>
     <main class=" main-content flex flex-col gap-4 font-poppins">
         @if (isset($subtitle) && isset($subtitle))

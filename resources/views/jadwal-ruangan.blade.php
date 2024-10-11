@@ -5,7 +5,7 @@
     <main class="ruangan flex flex-col gap-4 h-full">
 
         <!-- SECTION Filtering by lab dan tanggal -->
-        <section class="bg-[#f6fafd] p-4 rounded-xl flex flex-col gap-4 max-w-full shadow-md">
+        <section class="bg-white p-4 rounded-xl flex flex-col gap-4 max-w-full shadow-md">
             <section class="flex justify-between items-center">
                 <div>
                     <div x-data="{ isOpen: false }" class="relative inline-block text-left">
@@ -51,26 +51,30 @@
 
         </section>
         <!-- SECTION Table -->
-        <section class="content-of-inventaris bg-[#f6fafd] rounded-xl shadow-md h-full overflow-y-scroll">
-            <div class="  grid grid-cols-[2%_10%_25%_40%_auto] gap-5 border-b sticky top-0 z-20 bg-[#f6fafd] shadow">
-                <p class=" pl-2 py-2 border-r">No</p>
-                <p class=" pl-2 py-2 border-r">NIM</p>
-                <p class=" pl-2 py-2 border-r">Peminjam</p>
-                <p class=" pl-2 py-2 border-r">Log</p>
-                <p class=" pl-2 py-2">Waktu</p>
-            </div>
-            @foreach (collect($schedules)->sortBy(function ($schedule) {
+        <section class="content-of-inventaris bg-white rounded-xl shadow-md h-full overflow-y-scroll">
+            <div class="p-4">
+                <div
+                    class="  grid grid-cols-[2%_10%_25%_40%_auto] gap-5 border-b sticky top-0 z-20 bg-[#e4e4e4] shadow">
+                    <p class="flex justify-center items-center px-2 py-2 border-r border-gray-400 text-center">No</p>
+                    <p class="flex justify-center items-center px-2 py-2 border-r border-gray-400 text-center">NIM</p>
+                    <p class="flex justify-center items-center px-2 py-2 border-r border-gray-400 text-center">Peminjam
+                    </p>
+                    <p class="flex justify-center items-center px-2 py-2 border-r border-gray-400 text-center">Log</p>
+                    <p class="flex justify-center items-center px-2 py-2  text-center">Waktu</p>
+                </div>
+                @foreach (collect($schedules)->sortBy(function ($schedule) {
         $startTime = explode(' - ', $schedule['waktu'])[0];
         return strtotime($startTime);
     }) as $schedule)
-                <div class="grid grid-cols-[2%_10%_25%_40%_auto] gap-5 border-b">
-                    <p class="pl-2 py-2 border-r">{{ $loop->iteration }}</p>
-                    <p class="pl-2 py-2 border-r">{{ $schedule['nim'] }}</p>
-                    <p class="pl-2 py-2 border-r">{{ $schedule['name'] }}</p>
-                    <p class="pl-2 py-2 border-r">{{ $schedule['log'] }}</p>
-                    <p class="pl-2 py-2 ">{{ $schedule['waktu'] }}</p>
-                </div>
-            @endforeach
+                    <div class="grid grid-cols-[2%_10%_25%_40%_auto] gap-5 border-b border-gray-400">
+                        <p class="px-2 py-2 border-r border-gray-400">{{ $loop->iteration }}</p>
+                        <p class="px-2 py-2 border-r border-gray-400">{{ $schedule['nim'] }}</p>
+                        <p class="px-2 py-2 border-r border-gray-400">{{ $schedule['name'] }}</p>
+                        <p class="px-2 py-2 border-r border-gray-400">{{ $schedule['log'] }}</p>
+                        <p class="px-2 py-2 text-center">{{ $schedule['waktu'] }}</p>
+                    </div>
+                @endforeach
+            </div>
         </section>
     </main>
 </x-layout>
