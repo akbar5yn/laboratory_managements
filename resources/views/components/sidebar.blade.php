@@ -1,4 +1,4 @@
-<main class="hidden lg:w-[250px] bg-[#265166] lg:flex flex-col items-center rounded-xl relative">
+<main class="hidden lg:w-[250px] bg-[#2D3648] lg:flex flex-col items-center rounded-xl relative">
     <!-- ANCHOR PROFILE -->
     <section class="flex flex-col justify-center items-center gap-4 font-poppins text-white px-10 py-4 h-[300px]">
         <div class="border-2 border-white rounded-full p-1">
@@ -72,6 +72,12 @@
                     <x-heroicon-m-clipboard-document-list
                         class="w-4 h-4 {{ request()->is('laporan') ? 'text-[#265166]' : 'text-white' }}" />
                     Laporan</x-nav-link>
+            </li>
+            <li>
+                <x-nav-link href="/pendaftaran-pratikum" :active="request()->is('pendaftaran-pratikum')">
+                    <x-heroicon-s-document-arrow-up
+                        class="w-4 h-4 {{ request()->is('pendaftaran-pratikum') ? 'text-[#265166]' : 'text-white' }}" />
+                    Pendaftaran Praktikum</x-nav-link>
             </li>
         </ul>
 
