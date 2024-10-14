@@ -43,7 +43,7 @@
                 </div>
 
             </li>
-            <li x-data="{ isOpen: window.location.pathname.includes('peminjaman-alat') || window.location.pathname.includes('peminjaman-ruangan') }">
+            <li x-data="{ isOpen: window.location.pathname.includes('peminjaman-alat/') || window.location.pathname.includes('peminjaman-ruangan') }">
                 <button @click="isOpen = !isOpen" type="button" class="flex gap-3 p-2 w-full text-sm">
                     <x-heroicon-c-pencil-square class="w-4 h-4" />
                     Peminjaman
@@ -55,7 +55,7 @@
                     x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
                     x-transition:leave="transition ease-in duration-75 transform"
                     x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95">
-                    <x-nav-link href="/peminjaman-alat" :active="request()->is('peminjaman-alat')"> <span class="w-6"></span> Alat &
+                    <x-nav-link href="/peminjaman-alat/pengajuan" :active="request()->is('peminjaman-alat*')"> <span class="w-6"></span> Alat &
                         Barang</x-nav-link>
                     <x-nav-link href="/peminjaman-ruangan" :active="request()->is('peminjaman-ruangan')"> <span class="w-6"></span>
                         Ruangan</x-nav-link>
