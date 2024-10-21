@@ -18,23 +18,23 @@
                     <p class=" px-2 py-2 flex justify-center items-center text-center">Aksi</p>
                 </div>
 
-                @foreach ($tools as $tool)
+                @foreach ($units as $unit)
                     <div class="border-b border-gray-400 grid grid-cols-[4%_20%_20%_15%_15%_auto]">
                         <p class="px-2 py-2 text-center border-r border-gray-400">{{ $loop->iteration }}</p>
-                        <p class="px-2 py-2 border-r border-gray-400">{{ $tool['id_alat'] }}</p>
-                        <p class="px-2 py-2 border-r border-gray-400">{{ $tool['no_unit'] }}</p>
+                        <p class="px-2 py-2 border-r border-gray-400">{{ $unit['slug'] }}</p>
+                        <p class="px-2 py-2 border-r border-gray-400">{{ $unit['no_unit'] }}</p>
                         <p class="px-2 py-2 border-r border-gray-400">
                             <span
                                 class="px-2 py-1 rounded 
-                                {{ $tool['status'] == 'Tersedia' ? 'bg-green-100 text-green-600' : ($tool['status'] == 'Dipinjam' ? 'bg-yellow-100 text-yellow-600' : 'bg-red-100 text-red-600') }}">
-                                {{ $tool['status'] }}
+                                {{ $unit['status'] == 'Tersedia' ? 'bg-green-100 text-green-600' : ($unit['status'] == 'Dipinjam' ? 'bg-yellow-100 text-yellow-600' : 'bg-red-100 text-red-600') }}">
+                                {{ $unit['status'] }}
                             </span>
                         </p>
                         <p class="pl-2 py-2 border-r border-gray-400">
                             <span
                                 class="px-2 py-1 rounded 
-                                {{ $tool['kondisi'] == 'Normal' ? 'bg-blue-100 text-blue-600' : 'bg-red-100 text-red-600' }}">
-                                {{ $tool['kondisi'] }}
+                                {{ $unit['kondisi'] == 'Normal' ? 'bg-blue-100 text-blue-600' : 'bg-red-100 text-red-600' }}">
+                                {{ $unit['kondisi'] }}
                             </span>
                         </p>
 

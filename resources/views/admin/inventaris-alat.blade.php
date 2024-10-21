@@ -78,9 +78,9 @@
                         <p class="px-2 py-2 border-r border-gray-400">{{ $tool['nama_alat'] }}</p>
                         <p class="px-2 py-2 border-r border-gray-400">{{ $tool['lokasi'] }}</p>
                         <p class="px-2 py-2 border-r border-gray-400 text-center">{{ $tool['tahun_pengadaan'] }}</p>
-                        <p class="px-2 py-2 border-r border-gray-400">{{ $tool['fungsi_alat'] }}</p>
+                        <p class="px-2 py-2 border-r border-gray-400">{{ $tool['fungsi'] }}</p>
                         <div class="flex items-center justify-center gap-5">
-                            <a href="/inventaris-alat/{{ $tool['id_alat'] }}"
+                            <a href="{{ route('equipment.unit', ['name' => $tool->nama_alat]) }}"
                                 class="bg-blue-400 text-white px-2 rounded">Detail</a>
                             <a href="" class="bg-red-400 text-white px-2 rounded">Delete</a>
                         </div>
