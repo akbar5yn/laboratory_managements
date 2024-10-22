@@ -13,11 +13,12 @@ return new class extends Migration
     {
         Schema::create('equipment_categories', function (Blueprint $table) {
             $table->id();
-            // $table->string('slug')->unique();
+            $table->string('slug')->unique();
             $table->string('nama_alat');
             $table->string('lokasi');
-            $table->string('tahun_pengadaan')->nullable();
+            $table->integer('tahun_pengadaan')->nullable();
             $table->string('fungsi')->nullable();
+            $table->integer('jumlah');
             $table->timestamps();
         });
     }
