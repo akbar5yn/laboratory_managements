@@ -1,4 +1,4 @@
-<html lang="en" class="h-full bg-white scroll-smooth">
+<html lang="en" class="h-full scroll-smooth bg-white">
 
 <head>
     <meta charset="UTF-8">
@@ -32,6 +32,12 @@
         /* Handle on hover */
         ::-webkit-scrollbar-thumb:hover {
             background: #b30000;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
         }
 
         /* ANCHOR Sidebar */
@@ -89,9 +95,9 @@
     </style>
 </head>
 
-<body class=" bg-[#F7F9FC] flex p-10 gap-10">
+<body class="flex gap-10 bg-[#F7F9FC] p-10">
     <x-sidebar></x-sidebar>
-    <main class=" main-content flex flex-col gap-4 font-poppins">
+    <main class="main-content flex flex-col gap-4 font-poppins">
         @if (isset($subtitle) && isset($subtitle))
             <x-header :title="$title" :subtitle="$subtitle"></x-header>
         @else
